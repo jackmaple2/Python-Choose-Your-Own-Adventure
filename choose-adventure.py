@@ -19,7 +19,15 @@ elif answer == 'right':
     if answer == 'cross':
         answer = input('You crossed the bridge and saw a stranger. Would you like to speak to them? Type yes or no: ').lower()
         if answer == 'yes':
-            print('You talk to the stranger and they give you some gold, you win!')
+            amswer = input('You talk to the stranger and they give you some gold, do you accept the gold? Type yes or no: ').lower()
+
+            if answer == 'yes':
+                print('Congratulations, you have won the game!')
+            elif answer == 'no':
+                print('You did not take the gold and lost the game!')
+            else:
+                print('not a valid option, you lost!')
+
         elif answer == 'no':
             print('You decide not to talk to the stranger and lose the game.')
         else:
